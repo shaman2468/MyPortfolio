@@ -24,3 +24,4 @@ document.getElementById("mobile-menu-btn").addEventListener("click", () => {
 document.getElementById("close-menu-btn").addEventListener("click", () => {
     document.getElementById("mobile-nav").classList.remove("open");
 });
+
