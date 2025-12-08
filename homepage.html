@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jericho Villarina | IT Portfolio</title>
+    <title>Villarina Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,31 +68,49 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center hero-gradient pt-16">
-            <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                        Hi, I'm <span class="text-primary">Jericho Villarina</span>
-                    </h1>
-                    <h2 class="text-xl md:text-2xl mb-6 text-slate-600">
-                        IT Student & Web Developer
-                    </h2>
-                    <p class="text-lg mb-8 text-slate-600 max-w-lg">
-                        Building innovative digital solutions with a passion for clean code and user-centered design.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium">
-                            Hire Me
-                        </a>
-                        <a href="#projects" class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
-                            View Projects
-                        </a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 fade-in delay-1">
-                    <img src="image/480389086_2015655752242291_9175124222918472623_n.jpg" alt="Developer Workspace" class="rounded-lg shadow-lg w-full max-w-md mx-auto">
-                </div>
+    <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                Hi, I'm <span class="text-primary">Jericho Villarina</span>
+            </h1>
+            <h2 id="changingText" class="text-xl md:text-2xl mb-6 text-slate-600">
+                IT Student & Web Developer
+            </h2>
+            <p class="text-lg mb-8 text-slate-600 max-w-lg">
+                Building innovative digital solutions with a passion for clean code and user-centered design.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                    Hire Me
+                </a>
+                <a href="#projects" class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                    View Projects
+                </a>
             </div>
-        </section>
+        </div>
+        <div class="md:w-1/2 fade-in delay-1">
+            <img src="image/480389086_2015655752242291_9175124222918472623_n.jpg" alt="Developer Workspace" class="rounded-lg shadow-lg w-full max-w-md mx-auto">
+        </div>
+    </div>
+</section>
+
+<script>
+    let textArray = ["Web Designer", "Web Developer"];
+    let index = 0;
+
+    function changeText() {
+        // Get the current text and change only the part after "IT Student & "
+        const baseText = "IT Student & ";
+        document.getElementById("changingText").textContent = baseText + textArray[index];
+        
+        // Update index for next text, looping back after last item
+        index = (index + 1) % textArray.length;
+    }
+
+    // Change text every 2 seconds (2000 ms)
+    setInterval(changeText, 2000);
+</script>
+
 
         <!-- About Section -->
         <section id="about" class="py-20 bg-white">
@@ -215,33 +233,36 @@
 
             <!-- Project 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="your-project-image1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                <img src="image/kills.png" alt="Project 1" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="font-bold text-lg mb-2">Project Title 1</h3>
+                    <h3 class="font-bold text-lg mb-2">EVENT REGISTER SYSTEM</h3>
                     <p class="text-gray-600 text-sm">
-                        Short description of your project goes here. Explain what you built or what technology you used.
+                        A simple event registration system allows users to sign up for events by providing their name, email, and phone number, with the data stored locally or in a database for further processing.
+
                     </p>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="your-project-image2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                <img src="image/bads.png" alt="Project 2" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="font-bold text-lg mb-2">Project Title 2</h3>
+                    <h3 class="font-bold text-lg mb-2">USER MANAGEMENT DASHBOARD</h3>
                     <p class="text-gray-600 text-sm">
-                        Short description of this project. Add features, purpose, or what skills you used.
+                        A user management dashboard enables administrators to view, manage, and control user accounts, including actions like adding, editing, and deleting users, along with tracking their activities and roles.
+
                     </p>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="your-project-image3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                <img src="image/dols.png" alt="Project 3" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="font-bold text-lg mb-2">Project Title 3</h3>
+                    <h3 class="font-bold text-lg mb-2">STUDENT MANAGEMENT SYSTEM</h3>
                     <p class="text-gray-600 text-sm">
-                        Short description of the project. Showcase your role, tools used, or the outcome.
+                        A student management system allows schools or institutions to efficiently manage student information, including enrollment, grades, attendance, and communication with both students and teachers.
+
                     </p>
                 </div>
             </div>
@@ -300,10 +321,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-10">
-                            <h4 class="font-bold mb-4">Connect with me</h4>
-                            
-                        </div>
+                        
                     </div>
                     
                     <div class="fade-in delay-1">
@@ -389,10 +407,24 @@
                     </ul>
                 </div>
                 
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    
-                </div>
+                <div class="flex justify-center items-center flex-col">
+    <h3 class="text-xl font-bold mb-4 text-center text-white">Services</h3>
+    <ul class="space-y-4 flex flex-col items-center">
+        <li>
+            <a href="https://www.linkedin.com/in/jericho-villarina-865679307/" target="_blank" class="text-white hover:text-gray-300">LinkedIn</a>
+        </li>
+        <li>
+             <a href="mailto:your-email@example.com" class="text-white hover:text-gray-300">Gmail</a>
+        </li>
+        <li>
+            <a href="https://github.com/shaman2468" target="_blank" class="text-white hover:text-gray-300">GitHub</a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/jericho.villarina.1" target="_blank" class="text-white hover:text-gray-300">Facebook</a>
+        </li>
+    </ul>
+</div>
+
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
